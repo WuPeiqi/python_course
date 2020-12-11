@@ -894,7 +894,7 @@ stock_dict = {
    info = {"age": 12, "status": True, "name": "武沛齐"}
    if "agea" in info:
    
-       del info["age"]
+       # del info["age"]
        data = info.pop("age")
        print(info)
        print(data)
@@ -996,6 +996,7 @@ v2 = info.get("alex")
       (11,22):123
   }
   
+  # 错误
   info = {
       (11,[11,22,],22):"alex"
   }

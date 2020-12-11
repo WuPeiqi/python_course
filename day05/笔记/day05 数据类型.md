@@ -275,23 +275,23 @@ v1.功能(...)
 
 2. 判断字符串是否以 XX 结尾？得到一个布尔值
 
-```python
-v1 = "叨逼叨的一天，烦死了"
+   ```python
+   v1 = "叨逼叨的一天，烦死了"
+   
+   result = v1.endswith("烦死了")
+   
+   print(result) # 值为True
+   ```
 
-result = v1.endswith("烦死了")
-
-print(result) # 值为True
-```
-
-```python
-# 案例
-address = input("请输入地址：")
-
-if address.endswith('村'):
-	print("农业户口")
-else:
-	print("非农户口")
-```
+   ```python
+   # 案例
+   address = input("请输入地址：")
+   
+   if address.endswith('村'):
+   	print("农业户口")
+   else:
+   	print("非农户口")
+   ```
 
 3. 判断字符串是否为十进制数？得到一个布尔值
 
