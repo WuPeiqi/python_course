@@ -783,54 +783,54 @@ for i in range(300):
 
    ```python
    data = [ i for i in range(10)]
-   ```
-
-   ```python
-   data = [ (i,j) for j in range(5) for i in range(10)]
    
    data = []
    for i in range(10):
-       for j in range(5):
-           data.append( (i,j) )
+       data.append(i)
+   ```
+
+   ```python
+   data = [ [i,j] for j in range(5) for i in range(10) ]
    
-   data = [ [i, j] for j in range(5) for i in range(10)]
+   data = []
+   for j in range(5):
+       for i in range(10):
+           data.append([i,j])
    ```
 
    ```python
    # 一副扑克牌
-   
-   poker_list = [ (color,num) for num in range(1,14) for color in ["红桃", "黑桃", "方片", "梅花"]]
-   
    poker_list = [ [color, num] for num in range(1, 14) for color in ["红桃", "黑桃", "方片", "梅花"]]
-   
    print(poker_list)	
+   
+   
+   poker_list = [ (color,num) for num in range(1,14) for color in ["红桃", "黑桃", "方片", "梅花"] ]
    ```
 
 2. 烧脑面试题
 
    ```python
    def num():
-       return [lambda x: i * x for i in range(4)]
-   
-   
-   # 1. num()并获取返回值  [函数,函数,函数,函数] i=3
-   # 2. for循环返回值
-   # 3. 返回值的每个元素(2)
-   result = [m(2) for m in num()]  # [6,6,6,6]
-   print(result)
-   
+          return [lambda x: i * x for i in range(4)]
+      
+      
+      # 1. num()并获取返回值  [函数,函数,函数,函数] i=3
+      # 2. for循环返回值
+      # 3. 返回值的每个元素(2)
+      result = [m(2) for m in num()]  # [6,6,6,6]
+      print(result)
    ```
 
    ```python
    def num():
-       return (lambda x: i * x for i in range(4))
-   
-   
-   # 1. num()并获取返回值  生成器对象
-   # 2. for循环返回值
-   # 3. 返回值的每个元素(2)
-   result = [m(2) for m in num()]  # [0,2,4,6 ]
-   print(result)
+          return (lambda x: i * x for i in range(4))
+      
+      
+      # 1. num()并获取返回值  生成器对象
+      # 2. for循环返回值
+      # 3. 返回值的每个元素(2)
+      result = [m(2) for m in num()]  # [0,2,4,6 ]
+      print(result)
    ```
 
    
@@ -850,6 +850,8 @@ for i in range(300):
 5. 推导式
    - 常规操作
    - 小高级操作
+
+
 
 ## 作业
 

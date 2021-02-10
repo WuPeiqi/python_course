@@ -123,6 +123,11 @@ message = "伤情最是晚凉天，憔悴厮人不堪言"
 for index in range(len(message)):
     print( message[index] )
 """
+"""
+message = "伤情最是晚凉天，憔悴厮人不堪言"
+for index in range(len(message)-1,-1,-1):
+    print(message[index])
+"""
 
 # 13.使用for循环实现输出倒计时效果，例如：输出内容依次是："倒计时3秒"，"倒计时2秒"，"倒计时1秒"。
 """
